@@ -74,7 +74,6 @@ const App = () => {
   };
 
   const handleMint = async () => {
-    // First validate the form
     if (!validateForm()) {
       setResponse("Please fix the errors in the form");
       setResponseType("error");
@@ -91,7 +90,6 @@ const App = () => {
     
     try {
       console.log('Minting Token', { tokenName, initialSupply });
-      // This is the placeholder function you wanted to keep
       setResponse(`Minted ${initialSupply} of ${tokenName} successfully!`);
       setResponseType("success");
     } catch (error) {
@@ -249,7 +247,7 @@ const App = () => {
           </div>
           
           {/* Info section */}
-          <div className="bg-[#0f172a] p-6 rounded-2xl shadow-xl border border-gray-800">
+          <div className="bg-[#0f172a] p-6">
             <div className="space-y-4 mb-6">
               <h3 className="text-3xl font-semibold mb-2">Steps to Create Token</h3>
               <ol className="list-decimal list-inside text-sm text-gray-300 space-y-1">
